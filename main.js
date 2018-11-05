@@ -1,5 +1,5 @@
 $(updateView)
 
 Function updateView() {
-    alert("Using jQuery!")
+    alert("jQuery 4life")
 }
