@@ -1,8 +1,12 @@
 
-
+const BASE_URL = "https://zagster-service.herokuapp.com"
 $(updateView)
 
 function updateView() {
-   alert("jQuery 4Life") 
+   $.getJSON(BASE_URL + "/rides/count", updateRideCount )
 }
 
+function updateRideCount(data) {
+    numberOfRides = data.count
+    $("h2#rideCount").html(numberOfRides)
+}
