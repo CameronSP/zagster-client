@@ -1,5 +1,8 @@
+
+
 $(updateView)
 
-Function updateView() {
-    alert("jQuery 4life")
+function updateView() {
+   alert("jQuery 4Life") 
 }
+
