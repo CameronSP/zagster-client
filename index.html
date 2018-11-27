@@ -6,24 +6,30 @@
 src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
+<!--<scicpt src="-->
+<script scr= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="main.js"></script>
+
 </head>
 
 
 <body> 
 
-<h1>Zagster Bike share in Bend</h1>
+<h1> <center>Zagster Bike share in Bend</center></h1>
 <h2 id="rideCount"></h2>
-<p> Total Rides </p>
-<h3>Total Rides Per Month</h3>
-<h4 id="rideCountperMonth"></h4>
-<img src= "https://datavizcatalogue.com/methods/images/top_images/radial_bar_chart.png">
+<p> <center>Total Rides</center></p>
+<h3> <center>Total Rides Per Hour</center></h3>
+<h4 id="rideCountperHour"></h4>
+
 <p>Ride Count Per Month</p>
 <h5>Total Rides Per Station</h5>
 <h6 id=rideCountperStation></h6>
-<img src= "https://datavizcatalogue.com/methods/images/top_images/donut_chart.png">
+
 <p>Station Locations</p>
+<div id="ridesPerHour">
+    <canvas id= "ridesPerHourChart" width="400"></canvas>
+</div>
+
 
 </body>
 </html>
-<body style= "background-color: orangered"></body>
