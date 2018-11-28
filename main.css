@@ -1,7 +1,11 @@
 body {
     font-family: "ol", "Arial", sans-serif;
+    text-align: center;
   }
  
 .chartContainer{
-  margin:auto;
+  margin: 0 auto;
+  text-align: center;
+  
+  
 }
