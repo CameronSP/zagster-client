@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head> <title>Zagster Bikes of Bend</title>
+    <style>
+    body{
+        background-color: black
+    }   
+    head {
+        background-color: white
+    } 
+        </style>
 <link rel="stylesheet" href="main.css">
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
-<!--<scicpt src="-->
+
 <script scr= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="main.js"></script>
 
 </head>
 
 
-<body> 
+<body text="#00FFFF"> 
 
-<h1> <center>Zagster Bike share in Bend</center></h1>
+<h1> <center>Zagster Bike Share in Bend</center></h1>
 <h2 id="rideCount"></h2>
 <p> <center>Total Rides</center></p>
 <h3> <center>Total Rides Per Hour</center></h3>
-<h4 id="rideCountperHour"></h4>
-
-<p>Ride Count Per Month</p>
-<h5>Total Rides Per Station</h5>
-<h6 id=rideCountperStation></h6>
-
-<p>Station Locations</p>
-<div id="ridesPerHour">
-    <canvas id= "ridesPerHourChart" width="400"></canvas>
+<div class= "chartContainer">
+  <canvas id="ridesPerHourChart" height="400" width="400" style="border: solid;"></canvas>
 </div>
-
-
 </body>
+<p> <center>The data diplayed in the graph was collected from Zagster Bike share locations from 2016 to 2018. This graph specifically shows the relationship between the amount of rentals on a per hour bases.</center> </p>
 </html>

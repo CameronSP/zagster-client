@@ -2,3 +2,6 @@ body {
     font-family: "ol", "Arial", sans-serif;
   }
  
+.chartContainer{
+  margin:auto;
+}

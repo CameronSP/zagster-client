@@ -1,31 +1,36 @@
-
 const BASE_URL = "https://zagster-service.herokuapp.com"
+
+
 $(updateView)
+$(displayHourlyChart)
+
+let ridesPerHourChart = []
 
 function updateView() {
    $.getJSON(BASE_URL + "/rides/count", updateRideCount )
-   $.getJSON(BASE_URL + "/rides/count/per_hour", printRideCount)
-   displayHourlyChart()
+  /* $.when( $.getJSON(BASE_URL + "/rides/count/per_hour", displayHourlyChart)
+   ).then(
+       displayHourlyChart
+   );*/
+
+
 }
 
-function updateRideCount(data) {
-    numberOfRides = data.count
-    $("h2#rideCount").html(numberOfRides)
-}
 
-function printRideCount(data) {
-    console.log(data)
-}
+numberOfRides = data.count
+$("h2#rideCount").html(numberOfRides)
 
-function displayHourlyChart(data) {
+
+
+function displayHourlyChart(){
     var ctx = document.getElementById("ridesPerHourChart").getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["0", "1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"],
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [429, 231, 130, 85, 42, 1, 0, 1, 17, 16, 795, 425, 921, 846, 1795, 1789, 2119, 1630, 1942, 1637, 1636, 1054, 843, 710],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -56,6 +61,6 @@ function displayHourlyChart(data) {
         }
     });
     
+
+    
 }
-    
-    
